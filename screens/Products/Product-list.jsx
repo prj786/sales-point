@@ -26,15 +26,21 @@ const ProductList = () => {
     )
 
     const allProducts =         [
+        {title: 'Elite', subtitle: 'Camera', isFav: false, shopType: 3, index: 14},
         {subtitle: 'კარაქი', title: 'ორი ნაბიჯი', isFav: false, shopType: 1, index: 1},
         {subtitle: 'ზეთი', title: 'მაგნიტი', isFav: false, shopType: 1, index: 2},
+        {title: 'Zoommer', subtitle: 'Samsung TV', isFav: false, shopType: 3, index: 13},
         {subtitle: 'ცოცხი', title: 'კარფური', isFav: true, shopType: 1, index: 3},
         {subtitle: 'ვაშლი', title: 'ორი ნაბიჯი', isFav: false, shopType: 1, index: 4},
+        {title: 'Elite', subtitle: 'Samsung TV', isFav: false, shopType: 3, index: 10},
         {subtitle: 'შაურმა', title: 'მაკშაურმა', isFav: true, shopType: 2, index: 5},
         {subtitle: 'ზეთი', title: 'ორი ნაბიჯი', isFav: false, shopType: 1, index: 6},
+        {title: 'Smile', subtitle: 'LG Washer', isFav: false, shopType: 3, index: 12},
         {subtitle: 'ღვეზელი', title: 'მადარტი', isFav: false, shopType: 2, index: 7},
         {subtitle: 'ხინკალი', title: 'ხინკლის სახლი', isFav: false, shopType: 2, index: 8},
         {subtitle: 'ქაბაბი', title: 'ჭაშნაგირი', isFav: false, shopType: 2, index: 9},
+        {title: 'Zoommer', subtitle: 'Nintendo', isFav: false, shopType: 3, index: 11},
+        {title: 'Smile', subtitle: 'Blender', isFav: false, shopType: 3, index: 15},
     ]
 
     const [products, setProducts] = useState(allProducts);
@@ -49,7 +55,7 @@ const ProductList = () => {
     const onToggleCard = (card) => {
         if (card.isFav) {
             Toast.show({
-                type: 'success',
+                type: 'error',
                 text1: 'Removed from favourites',
                 position: 'bottom',
             });
@@ -115,6 +121,11 @@ const ProductList = () => {
                     value: 1,
                     label: 'Store',
                     icon: 'store'
+                },
+                {
+                    value: 3,
+                    label: 'Technics',
+                    icon: 'washing-machine'
                 },
                 {
                     value: 0,
